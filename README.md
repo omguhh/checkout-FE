@@ -19,5 +19,5 @@ Feel free to use the copy of the left hand side as guidance about what the image
 Layout example, feel free to not follow it and to create your own:
 (See layout below)
 
-Keep in mind that design/animations are essential but spend as much or little time as you want on it.
+Keep in mind that design/animations are essential but spend as much or little time as you want on it. banana
 
