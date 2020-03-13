@@ -1,0 +1,49 @@
+.button {
+  white-space: nowrap;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: .025em;
+  color: #6772e5;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+  &--call-to-action {
+    background-color: #FFD324;
+    border-color: #FFD324;
+    color: #ffffff;
+  }
+  &--submit {
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    background: #32325d;
+    white-space: nowrap;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+
+    background-color: #ffb300;
+    border-color: #ffb300;
+    color: #ffffff;
+
+
+  }
+}

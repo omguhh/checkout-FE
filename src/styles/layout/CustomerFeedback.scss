@@ -1,0 +1,75 @@
+.customerFeedback {
+  &__form {
+    &__layout {
+      background-color: #ffd700;
+      justify-content: center;
+      display: flex;
+      padding: 10px;
+      color: #484848;
+    }
+    &__item {
+      margin-bottom: 2%;
+      width: 49%;
+    }
+    &__container {
+      background: #f9f9f9;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 50%;
+      padding: 20px;
+      border-radius: 16px;
+    }
+    &__divider {
+      background-color: #ffd700;
+      height: 100%;
+      width: 10px;
+      border-radius: 6px;
+    }
+  }
+  &__header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background-image: url("./../img/wave.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-position-y: 50px;
+      max-height: 500px;
+
+    &__content {
+      width: 48%;
+      margin-bottom: 2%;
+      justify-content: center;
+      padding: 30px 20px 0 20px;
+    }
+
+    &__title {
+      font-size: 3em;
+      color: #484848;
+    }
+    &__caption {
+      font-size: 1.5em;
+      color: #4b4b4b;
+      margin-bottom: 24px;
+    }
+  }
+  &__reviews {
+    background-image: url("./../img/end_wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: -200px;
+    max-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__content {
+      color: #484848;
+      padding-top: 150px;
+    }
+  }
+}
