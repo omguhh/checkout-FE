@@ -25,4 +25,11 @@
       color: darken(#ffb300, 10%);
     }
   }
+  &--disabled {
+    cursor: not-allowed;
+    background-color: #D1D1D1;
+    &:hover {
+      background-color: #D1D1D1;
+    }
+  }
 }

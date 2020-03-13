@@ -26,6 +26,9 @@
       width: 10px;
       border-radius: 6px;
     }
+    &__warning {
+      color: red;
+    }
   }
   &__header {
       display: flex;

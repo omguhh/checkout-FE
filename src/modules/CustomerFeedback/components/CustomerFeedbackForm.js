@@ -11,7 +11,8 @@ class CustomerFeedbackForm extends PureComponent {
         this.state = {
             name: '',
             email: '',
-            feedback: ''
+            feedback: '',
+            invalid: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -19,12 +20,22 @@ class CustomerFeedbackForm extends PureComponent {
     }
 
     handleSubmit() {
-        this.props.createReview({
-            name: this.state.name,
-            email: this.state.email,
-            feedback: this.state.feedback,
-            date: moment().format('DD/MM/YYYY')
-        })
+        const enableSubmit = this.state.name.length > 0 && this.state.email.length > 0 && this.state.feedback.length > 0;
+        if(enableSubmit) {
+            this.props.createReview({
+                name: this.state.name,
+                email: this.state.email,
+                feedback: this.state.feedback,
+                date: moment().format('DD/MM/YYYY')
+            });
+            this.setState({
+                invalid: false
+            })
+        } else {
+            this.setState({
+                invalid:  true
+            })
+        }
     }
 
     handleChange(field, value, ) {
@@ -32,6 +43,7 @@ class CustomerFeedbackForm extends PureComponent {
     }
 
     render() {
+        const enableSubmit = this.state.name.length > 0 && this.state.email.length > 0 && this.state.feedback.length > 0;
         return (
             <div className={'customerFeedback__form__layout'}>
                 <div className={'customerFeedback__form__container'}>
@@ -44,8 +56,9 @@ class CustomerFeedbackForm extends PureComponent {
                             <input className={"input"} type={"email"} placeholder={"Email"} onChange={(event) => this.handleChange('email', event.target.value)}/>
                             <label className={"input__label"}> Feedback </label>
                             <textarea className={"input"} type={"textarea"} placeholder={"Feedback"} onChange={(event) => this.handleChange('feedback', event.target.value)} />
-                            <button onClick={ this.handleSubmit } className={"button button--submit"}>Submit your review</button>
+                            <button onClick={ this.handleSubmit } className={enableSubmit ? "button button--submit" : 'button button--disabled'}>Submit your review</button>
                         </div>
+                        {this.state.invalid && <small className={"customerFeedback__form__warning"}>There seems to be some missing details!</small>}
                     </div>
                     <div className={"customerFeedback__form__divider"} />
                     <div className={"customerFeedback__form__item"}>
